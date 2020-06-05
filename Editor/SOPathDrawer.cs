@@ -27,6 +27,7 @@
 			{
 				var folderPathAttribute = new FolderPathAttribute();
 				folderPathAttribute.AbsolutePath = true;
+				folderPathAttribute.RequireExistingPath = true;
 
 				attributes.Add(folderPathAttribute);
 			}
