@@ -1,6 +1,6 @@
 ﻿namespace Cuku.ScriptableObject
 {
-	public class StringSO : Sirenix.OdinInspector.SerializedScriptableObject
+	public class StringSO : UnityEngine.ScriptableObject
 	{
 		public string Value;
 	}
