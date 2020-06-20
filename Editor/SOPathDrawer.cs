@@ -1,11 +1,11 @@
-﻿namespace Cuku.ScriptableObject
+﻿#if ODIN_INSPECTOR
+namespace Cuku.ScriptableObject
 {
 	using Sirenix.OdinInspector;
 	using Sirenix.OdinInspector.Editor;
 	using Sirenix.Utilities;
 	using System;
 	using System.Collections.Generic;
-	using System.Linq;
 	using System.Reflection;
 
 	public class SOPathDrawer : OdinAttributeProcessor<StringSO>
@@ -25,12 +25,10 @@
 		{
 			if (member.Name == "Value")
 			{
-				var folderPathAttribute = new FolderPathAttribute();
-				folderPathAttribute.AbsolutePath = true;
-				folderPathAttribute.RequireExistingPath = true;
-
+				var folderPathAttribute = new FolderPathAttribute {AbsolutePath = true, RequireExistingPath = true};
 				attributes.Add(folderPathAttribute);
 			}
 		}
 	}
 }
+#endif
